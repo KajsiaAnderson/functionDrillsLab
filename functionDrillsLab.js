@@ -23,7 +23,9 @@ helloWorld()
 */
 
 //CODE HERE
-function 
+const jsNinja = () => console.log('I am a JavaScript ninja!')
+
+jsNinja()
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -33,7 +35,11 @@ function
 */
 
 //CODE HERE
+function printName(name){
+  console.log(name)
+}
 
+printName("Kajsia")
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -46,7 +52,11 @@ function
 */
 
 //CODE HERE
+function greeting(name){
+  console.log(`Hello, ${name}`)
+}
 
+greeting("Batman")
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -60,7 +70,17 @@ function
 */
 
 //CODE HERE
+// let compareNums = (num1, num2) => num1 > num2 ? console.info(num1) : console.log(num2)
+// compareNums(1,1)
 
+let compareNums = (num1, num2) => {
+  if(num1 >= num2){
+    console.log(num1)
+  }else {
+    console.log(num2)
+  }
+} 
+compareNums(4,4)
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -71,7 +91,13 @@ function
 */
 
 //CODE HERE
-
+function add(num1, num2){
+  let x = parseInt(num1)
+  let y = parseInt(num2)
+  return (x + y)
+}
+let sum = add("40ft", "20ft")
+console.log(sum)
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -86,7 +112,7 @@ const exclaim = function(str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+console.log('expression')
 
 
 
@@ -101,7 +127,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -111,7 +137,9 @@ const exclaimTwo = str => {
 
   Brownie points if you use a template string
 */
+const exclaimThree = str => {console.log(`${str.toUpperCase()}!!!`)}
 
+exclaimThree("whatever")
 
 
 ////////////////// PROBLEM 9 ////////////////////
@@ -126,7 +154,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log('declaration')
 // console.log('expression')
 
 
@@ -140,7 +168,19 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+function nameCheck(name){
+  if(name === 'Steven'){
+    return 'What is up Steven?'
+  }else if (name === 'Bryan'){
+    return 'Hey Bryan!'
+  }else{
+    return 'Cool name, ' + name
+  }
 
+} 
+
+let nameGreeting = nameCheck('Bobby')
+console.log(nameGreeting)
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -153,7 +193,20 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+function faveColorFinder(color){
+  if(color === 'red'){
+    return 'red is a great color'
+  }else if (color === 'green'){
+    return 'green is a solid favorite color'
+  }else if (color === 'black'){
+    return 'so trendy'
+  }else {
+    return 'you need to evaluate your favorite color choice'
+  }
+}
 
+let colorRating = faveColorFinder('blue')
+console.log(colorRating)
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -164,7 +217,13 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function printAllNames(namesArr){
+  for (let i = 0; i < namesArr.length; i++) {
+    console.log(namesArr[i])
+  }
+}
 
+printAllNames(namesArr)
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -175,7 +234,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+function thatsOdd(number){
+  if(number % 2 === 0){
+    return "That's not odd!"
+  }else {
+    return 'That is odd indeed!'
+  }
+}
+let oddChecker = thatsOdd(10)
+console.log(oddChecker)
 
 ////////////////// PROBLEM 14 ////////////////////
 
