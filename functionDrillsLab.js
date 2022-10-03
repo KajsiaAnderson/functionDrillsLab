@@ -255,6 +255,9 @@ console.log(oddChecker)
 */
 
 //CODE HERE
+let bestMovie = (movieParam) => {console.log(`${movieParam} is the best movie ever!`)}
+
+bestMovie("Sharknado")
 
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -269,7 +272,20 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+function bigOrSmall(arr){
+  let answers = []
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > 100){
+      answers.push('big')
+    }else {
+      answers.push('small')
+    }
+  }
+  let arrayEvaluator = answers
+  return arrayEvaluator
+}
 
+console.log(bigOrSmall(bigOrSmallArray))
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -280,7 +296,17 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+function theEliminator (contestants, loser){
+  for(let i = 0; i < contestants.length; i++){
+    if(contestants[i] === loser){
+      contestants.splice(i,1)
+    }
+  }
+  return contestants
+}
 
+let newContestants = theEliminator(contestants, loser)
+console.log(newContestants)
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -290,7 +316,10 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+function string(str){
+  console.log(str.toUpperCase())
+}
+string(sampleString)
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -303,6 +332,18 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+function emailCheck (email){
+  String(email)
+  email.trim()
+  if(email.includes('@')){
+    return 'email verified'
+  }else {
+    return 'must provide a valid email address'
+  }
+}
+
+console.log(emailCheck("kajsiagmail.com"))
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -310,7 +351,12 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function frog(gold){
+  let myFrog = (gold / 3)
+  console.log(myFrog)
+}
 
+let totalFrogs = frog(7)
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
@@ -318,7 +364,12 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function frog2(gold2){
+  let myFrog2 = Math.floor(gold2 / 3)
+  console.log(myFrog2)
+}
 
+let totalFrogs2 = frog2(7)
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
@@ -327,7 +378,17 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+function arrayUp(array){
+  for(let i = 0; i < array.length; i++)
+    if (array[i]< array[i + 1]){
+      return true
+   }else {
+      return false
+  }
+}
 
+let arrayIsAscending = arrayUp(sampleArray)
+console.log(arrayIsAscending)
 
 ////////////////// PROBLEM 22 ////////////////////
 
@@ -351,13 +412,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["rubberDuck", "duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["sailorDuck", "rubberDuck", "Duck"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["realDuck", "duck"]
